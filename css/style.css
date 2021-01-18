@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --grid-colms: 1;
+    --grid-rows: 1;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: linear-gradient(130deg, rgb(71, 139, 146), rgb(26, 93, 138));
+    text-align: center;
+    margin: 10px;
+}
+
+h1 {
+    color: rgb(45, 191, 235);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+button {
+    border: none;
+    background: rgb(29, 108, 182);
+    color: white;
+    font-size: 1rem;
+    padding: .8rem 1.2rem;
+    margin: .3rem .2rem;
+    cursor: pointer;
+    outline: none;
+    transition: all .1s ease;
+}
+
+button:hover {
+    color: rgb(14, 41, 99);
+    background: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-colms), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    margin: 1rem auto;
+    background: rgb(55, 121, 182);
+}
+
+.grid-item {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgb(225, 218, 218);
+}
+
+#pickColor {
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    -webkit-appearence: none;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+}
+
+#pickColor::-webkit-color-swatch-wrapper {
+    padding: 3px;
+}
+
+#pickColor::-webkit-color-swatch {
+    border-radius: 100%;
+    border: none;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    
+}
+
+label > input {
+    margin-left: .5rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
